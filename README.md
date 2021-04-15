@@ -1,9 +1,10 @@
 # New-York-City-Biking-Behavior
+
 # Overview
 Biking provides one source of relief to New York City's traffic congestion and lack of transit capacity issues. However, to promote biking practices, certain infrastructure needs to be created to encourage use of bikes even when environmental factors are unfavorable. To better understand the infrastructure needed, we looked at what factors affect biking behavior in New York City in the warmer months. By examining (1) date, (2) temperatures, (3) precipitation, and (4) day of week, we were able to identify precipitation and day of week as the most significant influencers of biking. Given these insights, New York City government can help increase reliance on bikes as transportation by prioritizing policies or infrastructure that make biking a more lucrative option for days with unfavorable weather. This could include covered bike paths or potentially indoor bike paths (which might sound crazy on the surface but suddently sound quite reasonable when taken in the context of the cost of subway tracks and roads).
  
 # Data Source
-[Zip File of Initial Data Files](https://github.com/tberkery/New-York-City-Biking-Behavior/blob/main/NYCDOT_Bicycle_Counts_2017-_East_River_Bridges.zip.zip) | [Website](https://data.cityofnewyork.us/Transportation/Bicycle-Counts-for-East-River-Bridges/gua4-p9wg)
+[Zip File of Initial Data Files](https://github.com/tberkery/New-York-City-Biking-Behavior/blob/main/NYCDOT_Bicycle_Counts_2017-_East_River_Bridges.zip.zip) | [Website](https://data.cityofnewyork.us/Transportation/Bicycle-Counts-for-East-River-Bridges/gua4-p9wg) | Note: Original analysis from Excel is in the main repository: tberkery/New-York-City-Biking-Behavior. This repository is forked from that one. 
 
 # Introduction and Business Question
 New York City is the epitome of a modern metropolis that doesn’t have enough transit capacity. Everyone using a car would cause too much traffic to be on the road. The subway already carries a massive load. As commuters and politicians alike seek [alternate options](https://www.nytimes.com/2021/03/02/travel/ebikes-bike-sharing-us.html), biking is [a fast-rising potential solution](https://www.bicycling.com/news/a30518994/deloitte-2020-study-bicycle-transportation/#:~:text=The%20study%20predicts%20that%20the,better%20tools%20for%20urban%20planning) to help alleviate the strain on NYC roads and subways with the added benefit of being the greenest option of the three. However, unlike car or public transit travel like the subway, biking is subject to numerous external factors influencing it’s viability. Regardless of whether or not you live in NYC, [you should care](https://www.smartcitiesdive.com/ex/sustainablecitiescollective/real-reason-why-bicycles-are-key-better-cities/25116/) because what’s happening with transportation capabilities in NYC is a trend across American cities and the green factor of biking is true regardless of location. Personally, we have seen major differences in biking behavior in America and Europe, leading us to wonder what patterns underly biking behavior. These considerations lead us to the following business question: **how can we better understand biking behavior in cities?**
@@ -42,3 +43,26 @@ To further build on this project, we would love to integrate more winter data (o
 
 # Steps for Replicating Analysis
 Steps are detailed [here](https://github.com/tberkery/New-York-City-Biking-Behavior/blob/main/Steps%20for%20Replicating%20Analysis.md).
+
+# Python Analysis
+To re-analyze the data using Python, I focused on answering the business question of: _How can we predict biking behavior_ by conducting a multivariate linear regression and generating several scatterplots comparing the independent variables to the total number of bike crossings. 
+
+The results are as follows:
+
+Figure 1. Total Crossings vs Temperature High 
+![alt text](https://github.com/aakap/New-York-City-Biking-Behavior/blob/main/total%20crossings%20high%20temp.png)
+
+
+Figure 2. Total Crossings vs Temperature Low 
+![alt text](https://github.com/aakap/New-York-City-Biking-Behavior/blob/main/total%20crossings%20low%20temp.png)
+
+
+Figure 3. Total Crossings vs Precipitation
+![alt text](https://github.com/aakap/New-York-City-Biking-Behavior/blob/main/total%20crossings%20precipitation.png)
+
+
+Figure 4. Total Crossings vs Weekend
+![alt text](https://github.com/aakap/New-York-City-Biking-Behavior/blob/main/total%20crossings%20weekday.png)
+
+Table 1. Results from Multivariate Regression
+![alt text](https://github.com/aakap/New-York-City-Biking-Behavior/blob/main/regression%20results.png)
